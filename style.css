@@ -24,14 +24,13 @@ body {
 }
 
 .container {
-  width: 60%;
+  min-width: 65%;
 }
 
 .container .wrapper {
-  min-width: 750px;
-  max-width: 1000px;
+  width: 100%;
   border-radius: 8px;
-  padding: 25px;
+  padding: 30px;
   background-color: var(--background-clr);
   box-shadow: var(--boxshadow-out);
 }
@@ -41,7 +40,7 @@ body {
   justify-content: center;
 }
 
-.wrapper .keys input {
+input {
   font-size: 20px;
   font-weight: 400;
   height: 50px;
@@ -66,19 +65,12 @@ p {
   place-items: center;
 }
 .toggle {
-  color: var(--input-clr);
   font-size: 15px;
-  outline: none;
-  background-color: var(--background-clr);
-  border: none;
-  text-transform: uppercase;
   letter-spacing: 3px;
   height: 35px;
   border-radius: 7px;
   padding: 0px 5px;
   margin: 15px 0px;
-  box-shadow: var(--boxshadow-out);
-  transition: all 500ms ease-in;
 }
 
 .wrapper .keys input:focus {
@@ -89,14 +81,12 @@ p {
 
 .wrapper .keys input[value="space"] {
   width: 60%;
+  max-width: 450px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .container {
     width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
   .container .wrapper {
     max-width: 98vw;
@@ -111,6 +101,9 @@ p {
     min-width: 26px;
     padding: 0px;
     margin: 1.4vw;
+  }
+  .wrapper .keys input[value="space"] {
+    max-width: 280px;
   }
   .wrapper .keys input:focus {
     font-size: 10px;
